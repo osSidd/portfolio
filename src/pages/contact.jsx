@@ -3,7 +3,7 @@ export default function Contact(){
         <div className="my-32">
             <h2 className="text-3xl mb-10 text-center font-semibold">Contact</h2>
             <div>
-                <form className="mr-auto ml-auto w-5/12">
+                <form className="mr-auto ml-auto w-11/12 md:w-5/12">
                     <label className="label" htmlFor="name">Name:</label>
                     <input className="input" type="text" name="name" id="name" placeholder="Name"/>
                     

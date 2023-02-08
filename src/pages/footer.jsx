@@ -1,7 +1,7 @@
 export default function Footer(){
     return (
-        <div className="bg-slate-200 flex justify-center items-center min-h-screen">
-            <h1 className="text-5xl font-bold">Footer</h1>
+        <div className="text-center text-sm">
+            <div>&copy; copyright Osama Siddiquee {new Date().getFullYear()}</div>
         </div>
     )
 }
