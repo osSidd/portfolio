@@ -3,7 +3,7 @@ export default function Skills(){
         <div className="bg-white my-32">
             <h2 className="text-3xl text-center font-semibold mb-10">Skills</h2>
             <div className="grid grid-rows-2 md:grid-rows-none items-center px-4 md:px-0 md:grid-cols-12 gap-0 md:gap-5">
-                <div className="md:col-start-2 md:col-span-4 shadow-lg py-2 px-4 rounded-lg">
+                <div className="md:col-start-2 md:col-span-4">
                     <ul>
                         <li className="my-2">Building websites and web-apps using MERN stack</li>
                         <li className="my-2">Making REST-APIs using NODE-EXPRESS</li>

@@ -1,5 +1,7 @@
 import Navbar from "./components/navbar"
+import Social from './components/social'
 import Home from "./pages/home"
+import About from "./pages/about"
 import Projects from "./pages/projects"
 import Skills from "./pages/skills"
 import Contact from './pages/contact'
@@ -11,8 +13,10 @@ function App() {
     <div>
       <div className="relative">
         <Navbar/>
+        <Social/>
       </div>
       <Home/>
+      <About/>
       <Projects/>
       <Skills/>
       <Contact/>
