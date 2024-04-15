@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
@@ -58,7 +58,7 @@ function Home() {
         return <div className="w-full h-screen bg-black flex items-center justify-center text-center">Loading..</div>;
     }
     return (
-        <>
+        <div className='px-8'>
             <Header />
             <Hero />
             <About />
@@ -68,7 +68,7 @@ function Home() {
             <Timeline />
             <Testimonial />
             <Contact />
-        </>
+        </div>
     );
 }
 
