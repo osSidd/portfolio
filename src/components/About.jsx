@@ -2,7 +2,7 @@
 
 function About({about}) {
   return (
-    <div className='pr-8 bg-teal-50 h-screen flex items-center justify-between flex-col lg:flex-row-reverse overflow-hidden'>
+    <div className='pr-8 bg-teal-50 min-h-screen flex items-center justify-between flex-col lg:flex-row-reverse overflow-hidden'>
       <div className='w-6/12'>
         {/* <p><span className='text-xl'>Hello</span>, <span className='text-2xl font-semibold'>my name is {about.name}</span></p> */}
         <p className='text-4xl leading-tight font-bold mt-8'>I am a {about.title} with over {about.exp_year} years of experience</p>

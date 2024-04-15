@@ -63,7 +63,7 @@ function Home() {
             <div className=''>
             <Hero about={user?.about}/>
             <About about={user?.about}/>
-            <Skills />
+            <Skills skills={sortedFilteredSkills}/>
             <Projects />
             <Services />
             <Timeline />
