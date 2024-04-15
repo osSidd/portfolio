@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import menuIcon from '../../assets/menu.svg'
 
-export default function Navbar(){
+export default function Navbar({name}){
 
     const navlinks = [
         {
@@ -32,7 +32,7 @@ export default function Navbar(){
         <nav className="py-8">
             <ul className="flex items-center">
                 <li className="mr-auto">
-                    <h1 className="text-3xl font-semibold">John Doe</h1>
+                    <a href="/"><h1 className="text-3xl font-semibold">{name?.split(' ')[0]}</h1></a>
                 </li>
                 <MenuLinks mobile={false} navlinks={navlinks}/>
                 <li className="ml-auto hidden lg:block">

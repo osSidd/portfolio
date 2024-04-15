@@ -2,9 +2,11 @@
 
 import Navbar from "./navbar"
 
-function Header() {
+function Header({name}) {
   return (
-    <Navbar/>
+    <header className=" w-full px-8 fixed">
+      <Navbar name={name}/>
+    </header>
   )
 }
 

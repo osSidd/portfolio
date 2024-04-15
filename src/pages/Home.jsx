@@ -58,16 +58,18 @@ function Home() {
         return <div className="w-full h-screen bg-black flex items-center justify-center text-center">Loading..</div>;
     }
     return (
-        <div className='px-8'>
-            <Header />
-            <Hero />
-            <About />
+        <div className='relative'>
+            <Header name={user?.about?.name} />
+            <div className=''>
+            <Hero about={user?.about}/>
+            <About about={user?.about}/>
             <Skills />
             <Projects />
             <Services />
             <Timeline />
             <Testimonial />
             <Contact />
+            </div>
         </div>
     );
 }
