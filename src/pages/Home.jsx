@@ -64,7 +64,7 @@ function Home() {
             <Hero about={user?.about}/>
             <About about={user?.about}/>
             <Skills skills={sortedFilteredSkills}/>
-            <Projects />
+            <Projects projects={sortedFilteredProject}/>
             <Services />
             <Timeline />
             <Testimonial />
