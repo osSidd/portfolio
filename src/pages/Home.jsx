@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../components/header/Header';
 import Hero from '../components/Hero';
@@ -19,7 +19,7 @@ function Home() {
 
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-    const [isSending, setIsSending] = useState(false);
+    // const [isSending, setIsSending] = useState(false);
 
     useEffect(() => {
         document.cookie = `portfolio-name=portfolio1`;
@@ -65,7 +65,7 @@ function Home() {
             <About about={user?.about}/>
             <Skills skills={sortedFilteredSkills}/>
             <Projects projects={sortedFilteredProject}/>
-            <Services />
+            <Services services={filteredServices}/>
             <Timeline />
             <Testimonial />
             <Contact />
