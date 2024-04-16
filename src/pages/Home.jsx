@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import Timeline from '../components/Timeline';
 import Testimonial from '../components/Testimonial';
 import Contact from '../components/Contact';
+import Footer from '../components/footer';
 function Home() {
     const params = useParams();
     const navigate = useNavigate();
@@ -66,10 +67,14 @@ function Home() {
             <Skills skills={sortedFilteredSkills}/>
             <Projects projects={sortedFilteredProject}/>
             <Services services={filteredServices}/>
-            <Timeline />
-            <Testimonial />
-            <Contact />
+            <div className='flex items-start justify-between'>
+                <Timeline type='education' timeline={filteredEducation}/>
+                <Timeline type='experience' timeline={filteredExperience}/>                
             </div>
+            <Testimonial testimonials={filteredTestimonials}/>
+            <Contact about={user?.about}/>
+            </div>
+            <Footer social={filteredSocialHandles}/>
         </div>
     );
 }
