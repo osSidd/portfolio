@@ -23,13 +23,28 @@ export default function Navbar({name}){
     ]
 
     const [mobileMenu, setMobileMenu] = useState(false)
+    const [navBg, setNavBg] = useState(false)
 
     function toggleMenu(){
         setMobileMenu(prev => !prev)
     }
 
+    function debounce(fn, delay){
+        let timerId
+        return () => {
+            clearTimeout(timerId)
+            const args = arguments
+            timerId = setTimeout(() => fn.apply(this, args), delay)
+        }
+    }
+
+    window.addEventListener('scroll', debounce(() => {
+        if (window.scrollY >= 100) setNavBg(true)
+        else setNavBg(false)
+    }, 200))
+
     return (
-        <nav className="py-8">
+        <nav className={`py-8 px-8 z-50 ${navBg ? 'bg-white shadow-lg' : 'bg-transparent shadow-none'}`}>
             <ul className="flex items-center">
                 <li className="mr-auto">
                     <a href="/"><h1 className="text-3xl font-semibold">{name?.split(' ')[0]}</h1></a>

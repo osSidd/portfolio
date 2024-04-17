@@ -4,7 +4,7 @@ import Navbar from "./navbar"
 
 function Header({name}) {
   return (
-    <header className=" w-full px-8 fixed">
+    <header className=" w-full fixed">
       <Navbar name={name}/>
     </header>
   )
